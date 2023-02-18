@@ -1,0 +1,21 @@
+.footer {
+  background-color: #edeef2;
+  font-size: small;
+  padding: 1px; /* Remove padding */
+}
+
+.footer-ul,
+.footer-label {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin-left: 3%; /* Remove margins */
+  text-align: left;
+}
+
+.footer-label {
+  font-size: 1.5rem;
+}
+
+.footer-li {
+  margin-bottom: 1%; /* Remove margins */
+}

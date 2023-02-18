@@ -1,0 +1,67 @@
+/* top right bottom left */
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  z-index: 2;
+  opacity: 0.95;
+  backdrop-filter: blur(2px);
+  background: #222341;
+  color: #f2f2f2;
+  border-style: solid;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.login h3 {
+  font-size: 36px;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.login p {
+  margin-bottom: 7%;
+}
+
+.user-icon {
+  background-image: url("../../images/user-icon.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  margin-bottom: 25%;
+  margin-right: 10%;
+}
+.password-icon {
+  background-image: url("../../images/lock-icon.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  margin-bottom: 25%;
+  margin-right: 10%;
+}
+
+.extra-components {
+  font-size: small;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  text-align: left;
+}
+
+a[href="/forgot-password"] {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+input[type="checkbox"] {
+  vertical-align: -2px;
+}

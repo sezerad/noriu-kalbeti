@@ -1,23 +1,48 @@
-import React from "react";
-import "./App.css";
+import { ToastContainer } from "react-toastify";
+import { Routes, Route, Navigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
+
+import { useAuthContext } from "./contexts/AuthContext";
+
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import UpdateProfile from "./pages/UpdateProfile";
 
 function App() {
+  const { isAuthenticated, loading } = useAuthContext();
+
+  if (loading) {
+    return (
+      <div>
+        <ClipLoader size={50} />
+      </div>
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Routes>
+          {isAuthenticated ? (
+            <>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/update-profile" element={<UpdateProfile />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </>
+          ) : (
+            <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="*" element={<Navigate to="/login" />} />
+            </>
+          )}
+        </Routes>
+      </div>
+      <ToastContainer />
+    </>
   );
 }
 

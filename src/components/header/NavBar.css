@@ -1,0 +1,47 @@
+.header {
+  font-size: 18px;
+}
+
+.left {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.mid {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.right {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+.right a,
+.mid a,
+.left a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color: #fcaa46;
+}
+
+.navbar li a:active {
+  background-color: #fcaa46;
+}

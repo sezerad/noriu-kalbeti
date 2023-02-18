@@ -1,0 +1,11 @@
+.loginpage-bgimage {
+  background: url("../images/background-image.jpg");
+  height: 96vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reference-content {
+  text-align: right;
+  font-size: x-small;
+}

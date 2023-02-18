@@ -1,0 +1,16 @@
+.input-component {
+  outline: 0;
+  background: #f2f2f2;
+  width: 90%;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 4%;
+  margin-bottom: 6%;
+  margin-right: 10%;
+  font-size: medium;
+}
+
+.input-component:focus {
+  background: #dbdbdb;
+}
