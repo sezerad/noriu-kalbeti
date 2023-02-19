@@ -3,8 +3,8 @@ import { getDatabase, ref, child, get } from "firebase/database";
 import { useAuthContext } from "../contexts/AuthContext";
 import { useEffect, useState } from "react";
 import { MdAccountCircle, MdLogout } from "react-icons/md";
-import InlineComponent from "../components/InlineComponent";
 import NavBar from "../components/header/NavBar";
+import InlineComponent from "../components/calendly/InlineComponent";
 
 type usersDBType = {
   nextLessonDate: string;
@@ -39,7 +39,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <div className="loginpage-bgimage">
+      <div className="loginPage-bgImage">
         <NavBar></NavBar>
         <span>{`Welcome, ${user?.name || user?.email}`}</span>
         <button onClick={() => navigate("/update-profile")}>
